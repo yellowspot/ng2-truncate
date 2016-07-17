@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "angular-cli": {},
+  "author": "Cristian Stugelmayer <cristian@yellowspot.com.ar>",
   "scripts": {
     "postinstall": "typings install",
     "lint": "tslint \"src/**/*.ts\"",
