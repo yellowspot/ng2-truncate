@@ -1,6 +1,6 @@
 {
   "name": "ng2-truncate",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
   "angular-cli": {},
   "author": "Cristian Stugelmayer <cristian@yellowspot.com.ar>",
@@ -13,7 +13,7 @@
     "url": "https://github.com/yellowspot/ng2-truncate/issues"
   },
   "scripts": {
-    "postinstall": "typings install && ng build -prod",
+    "postinstall": "typings install",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test"
   },
