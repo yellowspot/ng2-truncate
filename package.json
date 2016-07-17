@@ -13,7 +13,7 @@
     "url": "https://github.com/yellowspot/ng2-truncate/issues"
   },
   "scripts": {
-    "postinstall": "typings install",
+    "postinstall": "typings install && ng build -prod",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test"
   },
