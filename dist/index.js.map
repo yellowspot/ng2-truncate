@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["home/cristian/proyectos/angular2/ng2-truncate/tmp/broccoli_type_script_compiler-input_base_path-J59lHhGM.tmp/0/src/index.ts"],"names":[],"mappings":";;;;AAAA,iBAAc,kBAAkB,CAAC,EAAA","sourcesContent":["export * from './pipes/truncate';\n"]}

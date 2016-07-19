@@ -26,4 +26,4 @@ var ng2TruncatePipe = (function () {
     return ng2TruncatePipe;
 }());
 exports.ng2TruncatePipe = ng2TruncatePipe;
-//# sourceMappingURL=/pipes/truncate.js.map
+//# sourceMappingURL=truncate.js.map
