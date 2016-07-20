@@ -1,0 +1,42 @@
+{
+  "name": "ng2-truncate",
+  "version": "0.0.9",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "lint": "tslint src/**/*.ts",
+    "test": "tsc && karma start",
+    "postinstall": "typings install",
+    "prepublish": "tsc",
+    "tsc": "tsc",
+    "typings": "typings"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yellowspot/ng2-truncate.git"
+  },
+  "keywords": [
+    "Angular",
+    "2",
+    "truncate"
+  ],
+  "author": "Cristian Stugelmayer <cristian@yellowspot.com.ar>",
+  "bugs": {
+    "url": "https://github.com/yellowspot/ng2-truncate/issues"
+  },
+  "homepage": "https://github.com/yellowspot/ng2-truncate#readme",
+  "devDependencies": {
+    "typescript": "^1.7.5"
+  },
+  "dependencies": {
+    "@angular/core": "^2.0.0-rc.4",
+    "codelyzer": "^0.0.20",
+    "rxjs": "5.0.0-beta.6",
+    "tslint": "^3.6.0",
+    "typescript": "^1.8.10",
+    "typings":"^1.0.4",
+    "zone.js": "0.6.12"
+  }
+}
