@@ -28,7 +28,18 @@
   },
   "homepage": "https://github.com/yellowspot/ng2-truncate#readme",
   "devDependencies": {
-    "typescript": "^1.7.5"
+    "jasmine-core": "2.4.1",
+    "jasmine-spec-reporter": "2.5.0",
+    "karma": "^1.1.1",
+    "karma-chrome-launcher": "0.2.3",
+    "karma-jasmine": "0.3.8",
+    "karma-requirejs": "^1.0.0",
+    "karma-typescript-preprocessor": "^0.2.1",
+    "systemjs": "^0.19.31",
+    "@angular/platform-browser": "^2.0.0-rc.4",
+    "@angular/common": "^2.0.0-rc.4",
+    "@angular/compiler": "^2.0.0-rc.4",
+    "requirejs": "^2.1.0"
   },
   "dependencies": {
     "@angular/core": "^2.0.0-rc.4",
@@ -37,6 +48,8 @@
     "tslint": "^3.6.0",
     "typescript": "^1.8.10",
     "typings": "^1.0.4",
-    "zone.js": "0.6.12"
+    "zone.js": "0.6.12",
+    "es6-shim": "0.35.1",
+    "reflect-metadata": "0.1.3"
   }
 }
