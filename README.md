@@ -10,6 +10,22 @@ To install this library, run:
 $ npm install ng2-truncate --save
 ```
 
-## Running unit tests
+## Development
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To generate all `*.js`, `*.js.map` and `*.d.ts` files:
+
+```bash
+$ npm run tsc
+```
+
+To lint all `*.ts` files:
+
+```bash
+$ npm run lint
+```
+
+To execute all test via via [Karma](https://karma-runner.github.io):
+
+```bash
+$ npm run test
+```
