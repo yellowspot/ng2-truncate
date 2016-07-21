@@ -1,4 +1,4 @@
-# Ng2Truncate
+# ng2-truncate
 
 Simple angular 2 truncate pipe
 
