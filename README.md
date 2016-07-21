@@ -50,6 +50,12 @@ This will produce the following html
 <p>123xxx</p>
 ```
 
+## Demo
+
+Check out the demo on Plunker here: https://embed.plnkr.co/d3JiQCw756OEjS0HkVuY/ 
+
+Or clone the demo app built using [angular-cli](https://cli.angular.io): https://github.com/yellowspot/ng2-truncate-demo
+
 ## Development
 
 To generate all `*.js`, `*.js.map` and `*.d.ts` files:
