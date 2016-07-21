@@ -1,6 +1,6 @@
 # ng2-truncate
 
-Simple angular 2 truncate pipe
+Simple Angular 2 truncate pipe
 
 ## Running unit tests
 
