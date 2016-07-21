@@ -2,8 +2,9 @@
 node_modules/*
 npm-debug.log
 typings
+dist/**/*.js
+dist/**/*.d.ts
 
 # TypeScript
-*.js
 *.map
 *.d.ts
