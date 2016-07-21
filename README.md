@@ -1,7 +1,77 @@
-# Ng2Truncate
+# ng2-truncate
 
-Simple angular 2 truncate pipe
+This project is a Angular 2 pipe to truncate text to a set of characters.
 
-## Running unit tests
+## Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To install this library, run:
+
+```bash
+$ npm install ng2-truncate --save
+```
+
+## Simple Example
+
+By default, the pipe will truncate text after 40 characters. You could override this using the first argument:
+
+```TypeScript
+import { Component } from '@angular/core';
+import { Ng2TruncatePipe } from 'ng2-truncate';
+
+@Component({
+    selector: 'my-component',
+    template: '<p>{{ "123456789" | truncate : 3 }}</p>',
+    pipes: [Ng2TruncatePipe]
+})
+export class MyComponent {
+
+}
+```
+
+This will produce the following html
+
+```HTML
+<p>123...</p>
+```
+
+There is a second argument which allow to override the suffix used:
+
+```TypeScript
+@Component({
+    ...
+    template: '<p>{{ "123456789" | truncate : 3 : "xxx" }}</p>',
+    ...
+})
+```
+
+This will produce the following html
+
+```HTML
+<p>123xxx</p>
+```
+
+## Demo
+
+Check out the demo on Plunker here: https://embed.plnkr.co/d3JiQCw756OEjS0HkVuY/ 
+
+Or clone the demo app built using [angular-cli](https://cli.angular.io): https://github.com/yellowspot/ng2-truncate-demo
+
+## Development
+
+To generate all `*.js`, `*.js.map` and `*.d.ts` files:
+
+```bash
+$ npm run tsc
+```
+
+To lint all `*.ts` files:
+
+```bash
+$ npm run lint
+```
+
+To execute all test via via [Karma](https://karma-runner.github.io):
+
+```bash
+$ npm run test
+```
