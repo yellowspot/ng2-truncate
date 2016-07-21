@@ -10,6 +10,30 @@ To install this library, run:
 $ npm install ng2-truncate --save
 ```
 
+## Simple Example
+
+By default the pipe will truncate after 40 characters. You could override this with the first argument.
+
+```TypeScript
+import { Component } from '@angular/core';
+import { Ng2TruncatePipe } from 'ng2-truncate';
+
+@Component({
+    selector: 'my-component',
+    template: '<p>{{ "123456789" | truncate : 3 }}</p>',
+    pipes: [Ng2TruncatePipe]
+})
+export class MyComponent {
+
+}
+```
+
+This will produce the following html
+
+```HTML
+<p>123...</p>
+```
+
 ## Development
 
 To generate all `*.js`, `*.js.map` and `*.d.ts` files:
