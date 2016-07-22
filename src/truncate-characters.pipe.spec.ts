@@ -1,4 +1,4 @@
-import { Ng2TruncatePipe } from '../dist/ng2-truncate.pipe';
+import { TruncateCharactersPipe } from '../dist/truncate-characters.pipe';
 
 import {
   beforeEach,
@@ -7,12 +7,12 @@ import {
   it
 } from '@angular/core/testing';
 
-describe('Ng2TruncatePipe', () => {
+describe('TruncateCharactersPipe', () => {
 
-  let pipe: Ng2TruncatePipe;
+  let pipe: TruncateCharactersPipe;
 
   beforeEach(() => {
-    pipe = new Ng2TruncatePipe();
+    pipe = new TruncateCharactersPipe();
   });
 
   it('transforms "123456789" to "123..."', () => {

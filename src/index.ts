@@ -1,1 +1,2 @@
-export * from './ng2-truncate.pipe'
+export { TruncateCharactersPipe } from './truncate-characters.pipe'
+
