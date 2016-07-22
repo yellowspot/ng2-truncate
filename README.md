@@ -1,6 +1,6 @@
 # ng2-truncate
 
-This project is a Angular 2 pipe to truncate text to a set of characters.
+This project is a Angular 2 pipe to truncate text to a set of characters or words.
 
 ## Installation
 
@@ -53,12 +53,12 @@ By default, the pipe will truncate text after 40 characters. You could override 
 
 ```TypeScript
 import { Component } from '@angular/core';
-import { Ng2TruncatePipe } from 'ng2-truncate';
+import { TRUNCATE_PIPES } from 'ng2-truncate';
 
 @Component({
     selector: 'my-component',
     template: '<p>{{ "123456789" | truncate : 3 }}</p>',
-    pipes: [Ng2TruncatePipe]
+    pipes: [TRUNCATE_PIPES]
 })
 export class MyComponent {
 
@@ -68,7 +68,7 @@ export class MyComponent {
 This will produce the following html
 
 ```HTML
-<p>123...</p>
+<p>123…</p>
 ```
 
 There is a second argument which allow to override the suffix used:
@@ -86,6 +86,32 @@ This will produce the following html
 ```HTML
 <p>123xxx</p>
 ```
+
+## Truncate by words
+
+Using TRUNCATE_PIPES also enable truncating by words
+
+```TypeScript
+import { Component } from '@angular/core';
+import { TRUNCATE_PIPES } from 'ng2-truncate';
+
+@Component({
+    selector: 'my-component',
+    template: '<p>{{ "1234 567 89" | words : 2 }}</p>',
+    pipes: [TRUNCATE_PIPES]
+})
+export class MyComponent {
+
+}
+```
+
+This will produce the following html
+
+```HTML
+<p>1234 567…</p>
+```
+
+This pipe has also a second parameter to override the suffix used
 
 ## Demo
 
