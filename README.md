@@ -2,6 +2,9 @@
 
 This project is a Angular 2 pipe to truncate text to a set of characters or words.
 
+## CI Status
+![CI Status](https://circleci.com/gh/yellowspot/ng2-truncate/tree/master.svg?style=shield)
+
 ## Installation
 
 To install this library, run:
