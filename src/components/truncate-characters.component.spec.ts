@@ -1,14 +1,15 @@
+/// <reference path="../../typings/globals/jasmine/index.d.ts" />
+import { TestBed } from ‘@angular/core/testing’;
 import {
-  beforeEach,
-  describe,
-  expect,
-  it,
+  BrowserDynamicTestingModule,
+  platformBrowserDynamicTesting } from ‘@angular/platform-browser-dynamic/testing’;
+import {
   async,
   inject,
-  beforeEachProviders,
   ComponentFixture,
   setBaseTestProviders,
-  TestComponentBuilder
+  TestComponentBuilder,
+  addProviders
 } from "@angular/core/testing";
 
 import { provide } from "@angular/core";
@@ -20,8 +21,7 @@ import {
 
 import { NgTruncateComponent } from "../../dist/components/truncate-characters.component";
 
-setBaseTestProviders(TEST_BROWSER_DYNAMIC_PLATFORM_PROVIDERS,
-                     TEST_BROWSER_DYNAMIC_APPLICATION_PROVIDERS);
+TestBed.initTestEnvironment(BrowserDynamicTestingModule, platformBrowserDynamicTesting());
 
 import { Component } from "@angular/core";
 
@@ -57,7 +57,7 @@ describe("NgTruncateComponent", () => {
   let context: any;
   let element: any;
 
-  beforeEachProviders(() => {return [NgTruncateComponent, TestComponentBuilder, TruncateExample]; });
+  beforeEach(() => {return addProviders([NgTruncateComponent, TestComponentBuilder, TruncateExample]); });
 
   function createComponent(tcb: TestComponentBuilder, component: any, text: string): any {
     return tcb
