@@ -1,11 +1,5 @@
+/// <reference path="../typings/globals/jasmine/index.d.ts" />
 import { TruncateCharactersPipe } from '../dist/truncate-characters.pipe';
-
-import {
-  beforeEach,
-  describe,
-  expect,
-  it
-} from '@angular/core/testing';
 
 describe('TruncateCharactersPipe', () => {
 
