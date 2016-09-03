@@ -118,9 +118,11 @@ This pipe has also a second parameter to override the suffix used
 
 ## Demo
 
-Check out the live demo on Plunker here: https://embed.plnkr.co/d3JiQCw756OEjS0HkVuY
+Check out the [Live demo](https://yellowspot.github.io/ng2-truncate-demo)
 
-Or clone the demo app built using [angular-cli](https://cli.angular.io): https://github.com/yellowspot/ng2-truncate-demo
+...Or modify on Plunker [here](https://embed.plnkr.co/d3JiQCw756OEjS0HkVuY)
+
+...Or clone the demo app built using [angular-cli](https://cli.angular.io): https://github.com/yellowspot/ng2-truncate-demo
 
 ## Development
 
