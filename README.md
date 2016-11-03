@@ -95,7 +95,7 @@ You can also truncate left side
 ```TypeScript
 @Component({
     ...
-    template: '<p>{{ "123456789" | truncate : 4 : "…" | 'left' }}</p>',
+    template: '<p>{{ "123456789" | truncate : 4 : "…" : 'left' }}</p>',
     ...
 })
 ```
