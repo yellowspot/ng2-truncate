@@ -32,4 +32,12 @@ describe('TruncateCharactersPipe', () => {
   it('leaves empty string unchanged', () => {
     expect(pipe.transform('', 3)).toEqual('');
   });
+
+  it('left position', () => {
+    expect(pipe.transform('123456789', 4, '…', 'left')).toEqual('…6789');
+  });
+
+  it('left leaves empty string unchanged', () => {
+    expect(pipe.transform('', 3, '…', 'left')).toEqual('');
+  });
 });
