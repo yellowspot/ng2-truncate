@@ -9,7 +9,7 @@ describe('TruncateWordsPipe', () => {
     pipe = new TruncateWordsPipe();
   });
 
-  it('transforms "123 456789" to "123 456…"', () => {
+  it('transforms "123 456 789" to "123 456…"', () => {
     expect(pipe.transform('123 456 789', 2)).toEqual('123 456…');
   });
 
@@ -30,6 +30,19 @@ describe('TruncateWordsPipe', () => {
   });
 
   it('leaves empty string unchanged', () => {
+    expect(pipe.transform('', 3)).toEqual('');
+  });
+
+  // Left side truncating
+  it('[left] transforms "123 456 789" to "…456 789"', () => {
+    expect(pipe.transform('123 456 789', -2)).toEqual('…456 789');
+  });
+
+  it('[left] transforms "1234 5678 9" to "xxx9"', () => {
+    expect(pipe.transform('123 45678 9', -1, 'xxx')).toEqual('xxx9');
+  });
+
+  it('[left] leaves empty string unchanged', () => {
     expect(pipe.transform('', 3)).toEqual('');
   });
 });
