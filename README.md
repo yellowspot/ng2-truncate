@@ -90,6 +90,22 @@ This will produce the following html
 <p>123xxx</p>
 ```
 
+You can also truncate left side by using negative limit
+
+```TypeScript
+@Component({
+    ...
+    template: '<p>{{ "123456789" | truncate : -4 : "…" }}</p>',
+    ...
+})
+```
+
+This will produce the following html
+
+```HTML
+<p>…6789</p>
+```
+
 ## Truncate by words
 
 Using TRUNCATE_PIPES also enable truncating by words
