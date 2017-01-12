@@ -56,16 +56,21 @@ By default, the pipe will truncate text after 40 characters. You could override 
 
 ```TypeScript
 import { Component } from '@angular/core';
-import { TRUNCATE_PIPES } from 'ng2-truncate';
+import { TruncateModule } from 'ng2-truncate';
 
 @Component({
     selector: 'my-component',
-    template: '<p>{{ "123456789" | truncate : 3 }}</p>',
-    pipes: [TRUNCATE_PIPES]
+    template: '<p>{{ "123456789" | truncate : 3 }}</p>'
 })
 export class MyComponent {
 
 }
+
+@NgModule({
+  imports: [ TruncateModule ],
+  declarations: [ MyComponent ]
+})
+export class MyApp { }
 ```
 
 This will produce the following html
@@ -116,12 +121,17 @@ import { TRUNCATE_PIPES } from 'ng2-truncate';
 
 @Component({
     selector: 'my-component',
-    template: '<p>{{ "1234 567 89" | words : 2 }}</p>',
-    pipes: [TRUNCATE_PIPES]
+    template: '<p>{{ "1234 567 89" | words : 2 }}</p>'
 })
 export class MyComponent {
 
 }
+
+@NgModule({
+  imports: [ TruncateModule ],
+  declarations: [ MyComponent ]
+})
+export class MyApp { }
 ```
 
 This will produce the following html
