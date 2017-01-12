@@ -3,6 +3,8 @@ import { TruncateWordsPipe } from './truncate-words.pipe'
 
 export const TRUNCATE_PIPES = [TruncateCharactersPipe, TruncateWordsPipe]
 
+export { TruncateCharactersPipe, TruncateWordsPipe }
+
 export default {
   pipes: TRUNCATE_PIPES
 }
