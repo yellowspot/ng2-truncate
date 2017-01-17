@@ -29,9 +29,9 @@
   },
   "homepage": "https://github.com/yellowspot/ng2-truncate#readme",
   "devDependencies": {
-    "@angular/common": "^2.4.1",
-    "@angular/compiler": "^2.4.1",
-    "@angular/platform-browser": "^2.4.1",
+    "@angular/common": "^2.4.2",
+    "@angular/compiler": "^2.4.2",
+    "@angular/platform-browser": "^2.4.2",
     "jasmine-core": "2.4.1",
     "jasmine-spec-reporter": "2.5.0",
     "karma": "^1.1.1",
@@ -51,7 +51,7 @@
     "zone.js": "^0.6.21"
   },
   "dependencies": {
-    "@angular/core": "^2.4.1",
+    "@angular/core": "^2.4.2",
     "typings": "^1.0.4"
   }
 }
