@@ -44,7 +44,7 @@
     "traceur": "0.0.111"
   },
   "dependencies": {
-    "@angular/core": "^2.1.0",
+    "@angular/core": "^2.4.1",
     "codelyzer": "^0.0.20",
     "es6-shim": "0.35.1",
     "reflect-metadata": "0.1.3",
