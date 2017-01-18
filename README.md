@@ -13,59 +13,27 @@ To install this library, run:
 $ npm install ng2-truncate --save
 ```
 
-### Angular-cli Integration
-
-Add the following line to your ```angular-cli-build.js``` file
-
-```javascript
-module.exports = function(defaults) {
-  return new Angular2App(defaults, {
-    vendorNpmFiles: [
-      ...
-      'ng2-truncate/dist/**/*.+(js|js.map)',
-      ...
-    ]
-  });
-};
-```
-
-Click [here](https://github.com/yellowspot/ng2-truncate-demo/blob/master/angular-cli-build.js#L19) to see an example.
-
-Then you should update your system-config.ts to map ng2-truncate
-
-```javascript
-const map: any = {
-  'ng2-truncate': 'vendor/ng2-truncate/dist'
-};
-
-/** User packages configuration. */
-const packages: any = {
-  'ng2-truncate': {
-    main: 'index'
-  }
-};
-```
-
-### SystemJS
-
-If you are using SystemJS by your own, you should update your config files like in [this example](https://embed.plnkr.co/d3JiQCw756OEjS0HkVuY).
-
-## Simple Example
+## Example
 
 By default, the pipe will truncate text after 40 characters. You could override this using the first argument:
 
 ```TypeScript
 import { Component } from '@angular/core';
-import { TRUNCATE_PIPES } from 'ng2-truncate';
+import { TruncateModule } from 'ng2-truncate';
 
 @Component({
     selector: 'my-component',
-    template: '<p>{{ "123456789" | truncate : 3 }}</p>',
-    pipes: [TRUNCATE_PIPES]
+    template: '<p>{{ "123456789" | truncate : 3 }}</p>'
 })
 export class MyComponent {
 
 }
+
+@NgModule({
+  imports: [ TruncateModule ],
+  declarations: [ MyComponent ]
+})
+export class MyApp { }
 ```
 
 This will produce the following html
@@ -116,12 +84,17 @@ import { TRUNCATE_PIPES } from 'ng2-truncate';
 
 @Component({
     selector: 'my-component',
-    template: '<p>{{ "1234 567 89" | words : 2 }}</p>',
-    pipes: [TRUNCATE_PIPES]
+    template: '<p>{{ "1234 567 89" | words : 2 }}</p>'
 })
 export class MyComponent {
 
 }
+
+@NgModule({
+  imports: [ TruncateModule ],
+  declarations: [ MyComponent ]
+})
+export class MyApp { }
 ```
 
 This will produce the following html
