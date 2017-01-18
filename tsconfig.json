@@ -4,6 +4,7 @@
     "target": "es5",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "noEmitHelpers": false,
     "moduleResolution": "node",
     "sourceMap": true,
     "declaration": true,
@@ -14,8 +15,21 @@
     "typings/index.d.ts",
     "src/index.ts"
   ],
+  "lib": [
+    "es6",
+    "dom"
+  ],
+  "types": [
+    "jasmine",
+    "node"
+  ],
   "exclude": [
     "node_modules",
-    "dist"
-  ]
+    "dist",
+    "aot"
+  ],
+  "angularCompilerOptions": {
+    "genDir": "aot",
+    "skipMetadataEmit" : false
+  }
 }
