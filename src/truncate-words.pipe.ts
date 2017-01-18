@@ -1,9 +1,9 @@
-import { Pipe } from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'words'
 })
-export class TruncateWordsPipe {
+export class TruncateWordsPipe implements PipeTransform {
   transform(value: string, limit: number = 40, trail: String = '…'): string {
     let result = value;
 
