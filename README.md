@@ -76,11 +76,11 @@ This will produce the following html
 
 ## Truncate by words
 
-Using TRUNCATE_PIPES also enable truncating by words
+Using TruncateModule also enable truncating by words
 
 ```TypeScript
 import { Component } from '@angular/core';
-import { TRUNCATE_PIPES } from 'ng2-truncate';
+import { TruncateModule } from 'ng2-truncate';
 
 @Component({
     selector: 'my-component',
