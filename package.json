@@ -5,16 +5,12 @@
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "scripts": {
+    "build:aot": "ngc -p tsconfig-aot.json",
     "prebuild": "rm -r dist",
-    "build": "npm run ngc",
+    "prepublish": "ngc -p tsconfig-aot.json",
     "lint": "tslint src/**/*.ts",
     "test": "karma start",
-    "test-ci": "karma start --single-run true",
-    "postinstall": "typings install",
-    "prepublish": "npm run ngc",
-    "tsc": "tsc",
-    "ngc": "ngc",
-    "typings": "typings"
+    "test-ci": "karma start --single-run true"
   },
   "repository": {
     "type": "git",
@@ -31,12 +27,11 @@
   },
   "homepage": "https://github.com/yellowspot/ng2-truncate#readme",
   "devDependencies": {
-    "@angular/common": "^2.4.3",
-    "@angular/compiler": "^2.4.3",
-    "@angular/compiler-cli": "^2.4.3",
-    "@angular/platform-browser": "^2.4.3",
-    "@angular/platform-browser-dynamic": "^2.4.3",
-    "codelyzer": "^2.0.0-beta.4",
+    "@angular/common": "^4.0.0",
+    "@angular/compiler": "^4.0.0",
+    "@angular/platform-browser": "^4.0.0",
+    "@angular/platform-browser-dynamic": "^4.0.0",
+    "codelyzer": "~2.0.0",
     "es6-shim": "0.35.1",
     "jasmine-core": "2.4.1",
     "jasmine-spec-reporter": "2.5.0",
@@ -49,16 +44,18 @@
     "karma-webpack": "^2.0.1",
     "reflect-metadata": "0.1.3",
     "requirejs": "^2.1.0",
-    "rxjs": "^5.0.2",
+    "rxjs": "^5.1.0",
     "traceur": "0.0.111",
     "ts-loader": "^1.3.3",
     "tslint": "^4.3.1",
-    "typescript": "^2.1.5",
+    "typescript": "~2.1.0",
     "webpack": "^1.14.0",
-    "zone.js": "^0.7.6"
+    "zone.js": "0.8.4"
   },
   "dependencies": {
-    "@angular/core": "^2.4.3",
+    "@angular/compiler-cli": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "@angular/platform-server": "^4.0.0",
     "typings": "^1.0.4"
   }
 }
