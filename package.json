@@ -51,7 +51,7 @@
     "traceur": "0.0.111",
     "ts-loader": "2.1.0",
     "tslint": "^4.3.1",
-    "typescript": "^2.3.4",
+    "typescript": "2.4.0",
     "webpack": "3.0.0",
     "zone.js": "0.8.4"
   },
