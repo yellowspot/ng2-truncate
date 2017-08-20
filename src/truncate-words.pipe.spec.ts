@@ -1,5 +1,4 @@
-/// <reference path="../typings/globals/jasmine/index.d.ts" />
-import { TruncateWordsPipe } from '../dist/truncate-words.pipe';
+import { TruncateWordsPipe } from './truncate-words.pipe';
 
 describe('TruncateWordsPipe', () => {
 
