@@ -1,5 +1,4 @@
-/// <reference path="../typings/globals/jasmine/index.d.ts" />
-import { TruncateCharactersPipe } from '../dist/truncate-characters.pipe';
+import { TruncateCharactersPipe } from './truncate-characters.pipe';
 
 describe('TruncateCharactersPipe', () => {
 
