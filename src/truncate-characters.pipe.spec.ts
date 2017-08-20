@@ -40,4 +40,8 @@ describe('TruncateCharactersPipe', () => {
   it('[left] leaves empty string unchanged', () => {
     expect(pipe.transform('', -3, '…')).toEqual('');
   });
+
+  it('do not throw if undefined provided', () => {
+    expect(pipe.transform(undefined, 3)).toEqual('');
+  });
 });

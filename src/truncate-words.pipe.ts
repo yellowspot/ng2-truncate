@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TruncateWordsPipe implements PipeTransform {
   transform(value: string, limit: number = 40, trail: String = '…'): string {
-    let result = value;
+    let result = value || '';
 
     if (value) {
       let words = value.split(/\s+/);
