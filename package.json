@@ -26,6 +26,9 @@
     "url": "https://github.com/yellowspot/ng2-truncate/issues"
   },
   "homepage": "https://github.com/yellowspot/ng2-truncate#readme",
+  "peerDependencies": {
+    "@angular/core": ">= 4.0.0"
+  },
   "devDependencies": {
     "@angular/common": "^4.3.5",
     "@angular/compiler": "^4.3.5",
