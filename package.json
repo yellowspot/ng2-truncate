@@ -29,8 +29,12 @@
   "devDependencies": {
     "@angular/common": "^4.3.5",
     "@angular/compiler": "^4.3.5",
+    "@angular/compiler-cli": "^4.3.5",
+    "@angular/core": "^4.3.5",
     "@angular/platform-browser": "^4.3.5",
     "@angular/platform-browser-dynamic": "^4.3.5",
+    "@angular/platform-server": "^4.3.5",
+    "typings": "^1.0.4",
     "codelyzer": "~2.0.0",
     "es6-shim": "0.35.1",
     "jasmine-core": "2.4.1",
@@ -54,11 +58,5 @@
     "typescript": "2.4.0",
     "webpack": "3.0.0",
     "zone.js": "0.8.4"
-  },
-  "dependencies": {
-    "@angular/compiler-cli": "^4.3.5",
-    "@angular/core": "^4.3.5",
-    "@angular/platform-server": "^4.3.5",
-    "typings": "^1.0.4"
   }
 }
