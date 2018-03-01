@@ -3,7 +3,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/yellowspot/ng2-truncate.svg)](https://github.com/yellowspot/ng2-truncate/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/yellowspot/ng2-truncate.svg)](https://github.com/yellowspot/ng2-truncate/network)
 
-This project is a Angular 2 pipe to truncate text to a set of characters or words.
+This project is a Angular 4+ pipe to truncate text to a set of characters or words.
 
 ## CI Status
 ![CI Status](https://circleci.com/gh/yellowspot/ng2-truncate/tree/master.svg?style=shield)
