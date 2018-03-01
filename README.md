@@ -1,4 +1,7 @@
 # ng2-truncate
+[![GitHub issues](https://img.shields.io/github/issues/yellowspot/ng2-truncate.svg)](https://github.com/yellowspot/ng2-truncate/issues)
+[![GitHub stars](https://img.shields.io/github/stars/yellowspot/ng2-truncate.svg)](https://github.com/yellowspot/ng2-truncate/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/yellowspot/ng2-truncate.svg)](https://github.com/yellowspot/ng2-truncate/network)
 
 This project is a Angular 2 pipe to truncate text to a set of characters or words.
 
