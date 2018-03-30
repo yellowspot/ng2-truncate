@@ -1,11 +1,19 @@
-machine:
-  node:
-    version: 8.10.0
-
-  environment:
-    YARN_VERSION: 0.27.5
-    PATH: "${PATH}:${HOME}/.yarn/bin:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
-
-test:
-  override:
-    - npm run test-ci
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8.10.0-browsers
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+      - run:
+          name: install
+          command: npm install
+      - run:
+          name: Unit Test
+          command: npm run test-ci
+      - save_cache:
+          key: dependency-cache-{{ checksum "package-lock.json" }}
+          paths:
+            - ./node_modules
