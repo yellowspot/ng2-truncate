@@ -1,7 +1,4 @@
-# Deprecation warning
-This package has been moved to [@yellowspot/ng-truncate](https://www.npmjs.com/package/@yellowspot/ng-truncate)
-
-# ng2-truncate
+# ng-truncate
 [![GitHub issues](https://img.shields.io/github/issues/yellowspot/ng2-truncate.svg)](https://github.com/yellowspot/ng2-truncate/issues)
 [![GitHub stars](https://img.shields.io/github/stars/yellowspot/ng2-truncate.svg)](https://github.com/yellowspot/ng2-truncate/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/yellowspot/ng2-truncate.svg)](https://github.com/yellowspot/ng2-truncate/network)
@@ -16,7 +13,7 @@ This project is a Angular 4+ pipe to truncate text to a set of characters or wor
 To install this library, run:
 
 ```bash
-$ npm install ng2-truncate --save
+$ npm install @yellowspot/ng-truncate --save
 ```
 
 ## Example
@@ -25,7 +22,7 @@ By default, the pipe will truncate text after 40 characters. You could override 
 
 ```TypeScript
 import { Component } from '@angular/core';
-import { TruncateModule } from 'ng2-truncate';
+import { TruncateModule } from '@yellowspot/ng-truncate';
 
 @Component({
     selector: 'my-component',
@@ -86,7 +83,7 @@ Using TruncateModule also enable truncating by words
 
 ```TypeScript
 import { Component } from '@angular/core';
-import { TruncateModule } from 'ng2-truncate';
+import { TruncateModule } from '@yellowspot/ng-truncate';
 
 @Component({
     selector: 'my-component',
