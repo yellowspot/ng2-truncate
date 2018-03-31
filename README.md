@@ -1,3 +1,8 @@
+## npm new versions
+[@yellowspot/ng-truncate](https://www.npmjs.com/package/@yellowspot/ng-truncate)
+## npm old versions (< 1.3)
+[ng2-truncate](https://www.npmjs.com/package/ng2-truncate)
+
 # ng-truncate
 [![GitHub issues](https://img.shields.io/github/issues/yellowspot/ng2-truncate.svg)](https://github.com/yellowspot/ng2-truncate/issues)
 [![GitHub stars](https://img.shields.io/github/stars/yellowspot/ng2-truncate.svg)](https://github.com/yellowspot/ng2-truncate/stargazers)
