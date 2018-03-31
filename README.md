@@ -1,3 +1,4 @@
+# Deprecation warning
 This package has been moved to [@yellowspot/ng-truncate](https://www.npmjs.com/package/@yellowspot/ng-truncate)
 
 # ng2-truncate
