@@ -1,3 +1,5 @@
+# This package has been moved to [@yellowspot/ng-truncate](https://www.npmjs.com/package/@yellowspot/ng-truncate)
+
 # ng2-truncate
 [![GitHub issues](https://img.shields.io/github/issues/yellowspot/ng2-truncate.svg)](https://github.com/yellowspot/ng2-truncate/issues)
 [![GitHub stars](https://img.shields.io/github/stars/yellowspot/ng2-truncate.svg)](https://github.com/yellowspot/ng2-truncate/stargazers)
