@@ -1,6 +1,6 @@
 {
   "name": "ng-truncate-app",
-  "version": "1.5.0-0",
+  "version": "1.5.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -13,9 +13,7 @@
   "peerDependencies": {
     "@angular/core": ">= 4.0.0"
   },
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "devDependencies": {
     "@angular/common": "~7.2.0",
     "@angular/compiler": "~7.2.0",
