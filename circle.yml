@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:8.10.0-browsers
+      - image: circleci/node:10.15.2-browsers
     steps:
       - checkout
       - restore_cache:
@@ -12,7 +12,7 @@ jobs:
           command: npm install
       - run:
           name: Unit Test
-          command: npm run test-ci
+          command: ./node_modules/@angular/cli/bin/ng test --watch false @yellowspot/ng-truncate
       - save_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
           paths:
