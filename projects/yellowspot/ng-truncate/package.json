@@ -1,0 +1,8 @@
+{
+  "name": "@yellowspot/ng-truncate",
+  "version": "1.5.0-beta.0",
+  "peerDependencies": {
+    "@angular/common": ">= 4.0.0",
+    "@angular/core": ">= 4.0.0"
+  }
+}
