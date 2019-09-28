@@ -1,24 +1,140 @@
-# NgTruncate
+## npm
+[@yellowspot/ng-truncate](https://www.npmjs.com/package/@yellowspot/ng-truncate)
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
+# ng-truncate
+[![GitHub issues](https://img.shields.io/github/issues/yellowspot/ng2-truncate.svg)](https://github.com/yellowspot/ng2-truncate/issues)
+[![GitHub stars](https://img.shields.io/github/stars/yellowspot/ng2-truncate.svg)](https://github.com/yellowspot/ng2-truncate/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/yellowspot/ng2-truncate.svg)](https://github.com/yellowspot/ng2-truncate/network)
 
-## Code scaffolding
+This project is a Angular 4+ pipe to truncate text to a set of characters or words.
 
-Run `ng generate component component-name --project ng-truncate` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng-truncate`.
-> Note: Don't forget to add `--project ng-truncate` or else it will be added to the default project in your `angular.json` file. 
+## CI Status
+![CI Status](https://circleci.com/gh/yellowspot/ng2-truncate/tree/master.svg?style=shield)
 
-## Build
+## Installation
 
-Run `ng build ng-truncate` to build the project. The build artifacts will be stored in the `dist/` directory.
+To install this library, run:
 
-## Publishing
+```bash
+$ npm install @yellowspot/ng-truncate --save
+```
 
-After building your library with `ng build ng-truncate`, go to the dist folder `cd dist/ng-truncate` and run `npm publish`.
+## Example
 
-## Running unit tests
+By default, the pipe will truncate text after 40 characters. You could override this using the first argument:
 
-Run `ng test ng-truncate` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```TypeScript
+import { Component } from '@angular/core';
+import { TruncateModule } from '@yellowspot/ng-truncate';
 
-## Further help
+@Component({
+    selector: 'my-component',
+    template: '<p>{{ "123456789" | truncate : 3 }}</p>'
+})
+export class MyComponent {
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+}
+
+@NgModule({
+  imports: [ TruncateModule ],
+  declarations: [ MyComponent ]
+})
+export class MyApp { }
+```
+
+This will produce the following html
+
+```HTML
+<p>123…</p>
+```
+
+There is a second argument which allow to override the suffix used:
+
+```TypeScript
+@Component({
+    ...
+    template: '<p>{{ "123456789" | truncate : 3 : "xxx" }}</p>',
+    ...
+})
+```
+
+This will produce the following html
+
+```HTML
+<p>123xxx</p>
+```
+
+You can also truncate left side by using negative limit
+
+```TypeScript
+@Component({
+    ...
+    template: '<p>{{ "123456789" | truncate : -4 : "…" }}</p>',
+    ...
+})
+```
+
+This will produce the following html
+
+```HTML
+<p>…6789</p>
+```
+
+## Truncate by words
+
+Using TruncateModule also enable truncating by words
+
+```TypeScript
+import { Component } from '@angular/core';
+import { TruncateModule } from '@yellowspot/ng-truncate';
+
+@Component({
+    selector: 'my-component',
+    template: '<p>{{ "1234 567 89" | words : 2 }}</p>'
+})
+export class MyComponent {
+
+}
+
+@NgModule({
+  imports: [ TruncateModule ],
+  declarations: [ MyComponent ]
+})
+export class MyApp { }
+```
+
+This will produce the following html
+
+```HTML
+<p>1234 567…</p>
+```
+
+This pipe has also a second parameter to override the suffix used
+
+## Demo
+
+Check out the [Live demo](https://yellowspot.github.io/ng2-truncate-demo)
+
+...Or modify on Plunker [here](https://embed.plnkr.co/d3JiQCw756OEjS0HkVuY)
+
+...Or clone the demo app built using [angular-cli](https://cli.angular.io): https://github.com/yellowspot/ng2-truncate-demo
+
+## Development
+
+To generate all `*.js`, `*.js.map` and `*.d.ts` files:
+
+```bash
+$ ng build @yellowspot/ng-truncate
+```
+
+To lint all `*.ts` files:
+
+```bash
+$ ng lint @yellowspot/ng-truncate
+```
+
+To execute all test via via [Karma](https://karma-runner.github.io):
+
+```bash
+$ ng test @yellowspot/ng-truncate
+```
