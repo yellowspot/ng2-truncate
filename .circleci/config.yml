@@ -6,16 +6,18 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "package-lock.json" }}
+          keys:
+            - dependency-cache-{{ checksum "package-lock.json" }}
+            - dependency-cache-
       - run:
           name: install
           command: npm install
       - run:
           name: Lint
-          command: ng lint @yellowspot/ng-truncate
+          command: npm run ng -- lint @yellowspot/ng-truncate
       - run:
           name: Unit Test
-          command: ./node_modules/@angular/cli/bin/ng test --watch false @yellowspot/ng-truncate
+          command: npm run ng -- test --watch false @yellowspot/ng-truncate
       - save_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
           paths:
