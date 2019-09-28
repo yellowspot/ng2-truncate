@@ -11,6 +11,9 @@ jobs:
           name: install
           command: npm install
       - run:
+          name: Lint
+          command: ng lint @yellowspot/ng-truncate
+      - run:
           name: Unit Test
           command: ./node_modules/@angular/cli/bin/ng test --watch false @yellowspot/ng-truncate
       - save_cache:
