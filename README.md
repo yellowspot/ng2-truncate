@@ -124,17 +124,25 @@ Check out the [Live demo](https://yellowspot.github.io/ng2-truncate-demo)
 To generate all `*.js`, `*.js.map` and `*.d.ts` files:
 
 ```bash
-$ ng build @yellowspot/ng-truncate
+$ npm run ng build @yellowspot/ng-truncate
 ```
 
 To lint all `*.ts` files:
 
 ```bash
-$ ng lint @yellowspot/ng-truncate
+$ npm run ng lint @yellowspot/ng-truncate
 ```
 
 To execute all test via via [Karma](https://karma-runner.github.io):
 
 ```bash
-$ ng test @yellowspot/ng-truncate
+$ npm run ng test @yellowspot/ng-truncate
+```
+
+Publish:
+
+```bash
+$ npm run ng build @yellowspot/ng-truncate
+$ cd dist/yellowspot/ng-truncate/
+$ npm publish
 ```
