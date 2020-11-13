@@ -4,9 +4,9 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'truncate'
 })
 export class TruncateCharactersPipe implements PipeTransform {
-  transform(value: string, limit: number = 40, trail: string = '…', includeTrailling = false): string {
+  transform(value: string, limit: number = 40, trail: string = '…', includeTrailing = false): string {
     if (!value) { value = ''; }
-    let stringLength = this.getStringLength(limit, trail, includeTrailling);
+    let stringLength = this.getStringLength(limit, trail, includeTrailing);
 
     if (stringLength < 0) {
       stringLength *= -1;
@@ -16,8 +16,8 @@ export class TruncateCharactersPipe implements PipeTransform {
     }
   }
 
-  private getStringLength(limit: number, trail: string, includeTrailling = false) {
-    if (includeTrailling) {
+  private getStringLength(limit: number, trail: string, includeTrailing = false) {
+    if (includeTrailing) {
       if (limit < 0) {
         return limit + trail.length;
       } else {
