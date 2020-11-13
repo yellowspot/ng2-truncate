@@ -8,12 +8,20 @@ describe('TruncateCharactersPipe', () => {
     pipe = new TruncateCharactersPipe();
   });
 
-  it('transforms "123456789" to "123…"', () => {
+  it('transforms "123456789" to "1234…"', () => {
     expect(pipe.transform('123456789', 4)).toEqual('1234…');
   });
 
-  it('transforms "123456789" to "123xxx"', () => {
+  it('transforms "123456789" to "123… when including trailling character"', () => {
+    expect(pipe.transform('123456789', 4, undefined, true)).toEqual('123…');
+  });
+
+  it('transforms "123456789" to "1234xxx"', () => {
     expect(pipe.transform('123456789', 4, 'xxx')).toEqual('1234xxx');
+  });
+
+  it('transforms "123456789" to "12xxx when including trailling character"', () => {
+    expect(pipe.transform('123456789', 4, 'xxx', true)).toEqual('1xxx');
   });
 
   it('transforms "1234 5678" to "123…"', () => {
@@ -35,6 +43,10 @@ describe('TruncateCharactersPipe', () => {
   // Left side truncating
   it('[left] position', () => {
     expect(pipe.transform('123456789', -4, '…')).toEqual('…6789');
+  });
+
+  it('[left] position including trailling', () => {
+    expect(pipe.transform('123456789', -4, '…', true)).toEqual('…789');
   });
 
   it('[left] leaves empty string unchanged', () => {

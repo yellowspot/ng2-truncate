@@ -4,8 +4,11 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'truncate'
 })
 export class TruncateCharactersPipe implements PipeTransform {
-  transform(value: string, limit: number = 40, trail: string = '…'): string {
+  transform(value: string, limit: number = 40, trail: string = '…', includeTrailling = false): string {
     if (!value) { value = ''; }
+    if (includeTrailling) {
+      limit < 0 ? limit += trail.length : limit -= trail.length;
+    }
 
     if (limit < 0) {
       limit *= -1;
