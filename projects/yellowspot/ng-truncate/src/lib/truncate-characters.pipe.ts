@@ -16,7 +16,7 @@ export class TruncateCharactersPipe implements PipeTransform {
     }
   }
 
-  private getStringLength(limit, trail, includeTrailling = false) {
+  private getStringLength(limit: number, trail: string, includeTrailling = false) {
     if (includeTrailling) {
       if (limit < 0) {
         return limit + trail.length;
