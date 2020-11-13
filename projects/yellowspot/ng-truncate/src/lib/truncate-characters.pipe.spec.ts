@@ -12,7 +12,7 @@ describe('TruncateCharactersPipe', () => {
     expect(pipe.transform('123456789', 4)).toEqual('1234…');
   });
 
-  it('transforms "123456789" to "123… when including trailling character"', () => {
+  it('transforms "123456789" to "123… when including trailing character"', () => {
     expect(pipe.transform('123456789', 4, undefined, true)).toEqual('123…');
   });
 
@@ -20,7 +20,7 @@ describe('TruncateCharactersPipe', () => {
     expect(pipe.transform('123456789', 4, 'xxx')).toEqual('1234xxx');
   });
 
-  it('transforms "123456789" to "12xxx when including trailling character"', () => {
+  it('transforms "123456789" to "12xxx when including trailing character"', () => {
     expect(pipe.transform('123456789', 4, 'xxx', true)).toEqual('1xxx');
   });
 
@@ -32,8 +32,16 @@ describe('TruncateCharactersPipe', () => {
     expect(pipe.transform('123', 3)).toEqual('123');
   });
 
+  it('change "123" to "12… if including trailing char"', () => {
+    expect(pipe.transform('123', 3, undefined, true)).toEqual('12…');
+  });
+
   it('leaves "12" unchanged', () => {
     expect(pipe.transform('12', 3)).toEqual('12');
+  });
+
+  it('leaves "12" unchanged when including trailing char', () => {
+    expect(pipe.transform('12', 3, undefined, true)).toEqual('12');
   });
 
   it('leaves empty string unchanged', () => {
@@ -45,7 +53,7 @@ describe('TruncateCharactersPipe', () => {
     expect(pipe.transform('123456789', -4, '…')).toEqual('…6789');
   });
 
-  it('[left] position including trailling', () => {
+  it('[left] position including trailing', () => {
     expect(pipe.transform('123456789', -4, '…', true)).toEqual('…789');
   });
 
