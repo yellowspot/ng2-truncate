@@ -13,7 +13,7 @@ export class TruncateCharactersPipe implements PipeTransform {
     if (!value) { value = ''; }
     if (options && options[1] && typeof(options[1]) === 'object') {
       trailingString = options[1].trailingString || defaultTrailing;
-      countTrailing = options[1].includeTrailing || false;
+      countTrailing = options[1].countTrailing || false;
     } else {
       trailingString = options[1] || defaultTrailing;
       countTrailing = options[2] || false;
@@ -29,8 +29,8 @@ export class TruncateCharactersPipe implements PipeTransform {
     }
   }
 
-  private getStringLength(limit: number, trail: string, includeTrailing = false) {
-    if (includeTrailing) {
+  private getStringLength(limit: number, trail: string, countTrailing = false) {
+    if (countTrailing) {
       if (limit < 0) {
         return limit + trail.length;
       } else {

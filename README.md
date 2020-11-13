@@ -19,7 +19,7 @@ To install this library, run:
 $ npm install @yellowspot/ng-truncate --save
 ```
 
-## Example
+## Examples
 
 By default, the pipe will truncate text after 40 characters. You could override this using the first argument:
 
@@ -78,6 +78,22 @@ This will produce the following html
 
 ```HTML
 <p>…6789</p>
+```
+
+Count trailing string as part of the limit
+
+```TypeScript
+@Component({
+    ...
+    template: '<p>{{ "123456789" | truncate : 3 : { trailingString: "…", countTrailing: true } }}</p>',
+    ...
+})
+```
+
+This will produce the following html
+
+```HTML
+<p>12…</p>
 ```
 
 ## Truncate by words
