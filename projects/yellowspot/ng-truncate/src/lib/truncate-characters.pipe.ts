@@ -8,7 +8,9 @@ const defaultLength = 40;
 })
 export class TruncateCharactersPipe implements PipeTransform {
   transform(value: string, ...options: any): string {
-    let limit = options[0] || defaultLength, trailingString = '', countTrailing = false;
+    const limit = options[0] || defaultLength;
+    let trailingString = '';
+    let countTrailing = false;
 
     if (!value) { value = ''; }
     if (options && options[1] && typeof(options[1]) === 'object') {
