@@ -1,18 +1,31 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
+const defaultTrailing = '…';
+const defaultLength = 40;
+
 @Pipe({
   name: 'truncate'
 })
 export class TruncateCharactersPipe implements PipeTransform {
-  transform(value: string, limit: number = 40, trail: string = '…', includeTrailing = false): string {
+  transform(value: string, ...options: any): string {
+    let limit = options[0] || defaultLength, trailingString = '', countTrailing = false;
+
     if (!value) { value = ''; }
-    let stringLength = this.getStringLength(limit, trail, includeTrailing);
+    if (options && options[1] && typeof(options[1]) === 'object') {
+      trailingString = options[1].trailingString || defaultTrailing;
+      countTrailing = options[1].includeTrailing || false;
+    } else {
+      trailingString = options[1] || defaultTrailing;
+      countTrailing = options[2] || false;
+    }
+
+    let stringLength = this.getStringLength(limit, trailingString, countTrailing);
 
     if (stringLength < 0) {
       stringLength *= -1;
-      return value.length > stringLength ? trail + value.substring(value.length - stringLength, value.length) : value;
+      return value.length > stringLength ? trailingString + value.substring(value.length - stringLength, value.length) : value;
     } else {
-      return value.length > stringLength ? value.substring(0, stringLength) + trail : value;
+      return value.length > stringLength ? value.substring(0, stringLength) + trailingString : value;
     }
   }
 
