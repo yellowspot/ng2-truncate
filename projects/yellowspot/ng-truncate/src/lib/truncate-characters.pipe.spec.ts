@@ -61,7 +61,15 @@ describe('TruncateCharactersPipe', () => {
     expect(pipe.transform('', -3, '…')).toEqual('');
   });
 
+  it('[left] leaves empty string unchanged when including trailing', () => {
+    expect(pipe.transform('', -3, '…', true)).toEqual('');
+  });
+
   it('do not throw if undefined provided', () => {
     expect(pipe.transform(undefined, 3)).toEqual('');
+  });
+
+  it('do not throw if undefined provided when include trailing', () => {
+    expect(pipe.transform(undefined, 3, undefined, true)).toEqual('');
   });
 });
