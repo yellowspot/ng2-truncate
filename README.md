@@ -168,7 +168,7 @@ $ npm run ng test @yellowspot/ng-truncate
 Publish:
 
 ```bash
-$ npm run ng build @yellowspot/ng-truncate
+$ npm run build-lib
 $ cd dist/yellowspot/ng-truncate/
 $ npm publish
 ```
