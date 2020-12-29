@@ -26,7 +26,7 @@
               "src/styles.css"
             ],
             "scripts": [],
-            "es5BrowserSupport": true
+            "aot": true
           },
           "configurations": {
             "production": {
@@ -38,8 +38,6 @@
               ],
               "optimization": true,
               "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -50,6 +48,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -138,11 +140,16 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/yellowspot/ng-truncate/tsconfig.lib.json",
             "project": "projects/yellowspot/ng-truncate/ng-package.json"
-          }
+          },
+            "configurations": {
+              "production": {
+                "tsConfig": "projects/yellowspot/ng-truncate/tsconfig.lib.prod.json"
+              }
+            }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
