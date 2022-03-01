@@ -11,6 +11,7 @@ export class TruncateWordsPipe implements PipeTransform {
       const words = value.split(/\s+/);
       if (words.length > Math.abs(limit)) {
         if (limit < 0) {
+          // eslint-disable-next-line no-param-reassign
           limit *= -1;
           result = trail + words.slice(words.length - limit, words.length).join(' ');
         } else {

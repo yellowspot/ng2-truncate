@@ -11,9 +11,9 @@ export class TruncateCharactersPipe implements PipeTransform {
     const limit = options[0] || defaultLength;
     let trailingString = '';
     let countTrailing = false;
+    const safeValue = value || '';
 
-    if (!value) { value = ''; }
-    if (options && options[1] && typeof(options[1]) === 'object') {
+    if (options && options[1] && typeof (options[1]) === 'object') {
       trailingString = options[1].trailingString || defaultTrailing;
       countTrailing = options[1].countTrailing || false;
     } else {
@@ -25,19 +25,23 @@ export class TruncateCharactersPipe implements PipeTransform {
 
     if (stringLength < 0) {
       stringLength *= -1;
-      return value.length > stringLength ? trailingString + value.substring(value.length - stringLength, value.length) : value;
-    } else {
-      return value.length > stringLength ? value.substring(0, stringLength) + trailingString : value;
+      return safeValue.length > stringLength
+        ? trailingString + safeValue.substring(safeValue.length - stringLength, safeValue.length)
+        : safeValue;
     }
+
+    return safeValue.length > stringLength
+      ? safeValue.substring(0, stringLength) + trailingString
+      : safeValue;
   }
 
   private getStringLength(limit: number, trail: string, countTrailing = false) {
     if (countTrailing) {
       if (limit < 0) {
         return limit + trail.length;
-      } else {
-        return limit - trail.length;
       }
+
+      return limit - trail.length;
     }
 
     return limit;

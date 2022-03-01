@@ -1,0 +1,38 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "airbnb-base"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "plugins": [
+    "import",
+    "@typescript-eslint"
+  ],
+  "ignorePatterns": [
+    "projects/yellowspot/ng-truncate/src/**/*.spec.ts",
+    "projects/yellowspot/ng-truncate/src/test.ts"
+  ],
+  "rules": {
+    "import/prefer-default-export": "off",
+    "comma-dangle": "off",
+    "class-methods-use-this": "off",
+    "import/extensions": "off"
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "projects/yellowspot/ng-truncate/tsconfig.lib.json"
+      }
+    }
+  }
+}
