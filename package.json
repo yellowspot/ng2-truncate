@@ -1,6 +1,6 @@
 {
   "name": "ng-truncate-app",
-  "version": "1.5.2",
+  "version": "2.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -12,9 +12,7 @@
   },
   "private": true,
   "peerDependencies": {},
-  "dependencies": {
-    "tslib": "^2.3.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@angular-devkit/build-angular": "^13.2.5",
     "@angular/animations": "^13.2.4",
@@ -44,6 +42,7 @@
     "protractor": "~7.0.0",
     "rxjs": "~6.6.3",
     "ts-node": "~7.0.0",
+    "tslib": "^2.3.1",
     "tslint": "~6.1.0",
     "typescript": "4.5.5",
     "zone.js": "~0.11.4"

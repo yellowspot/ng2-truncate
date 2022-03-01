@@ -1,6 +1,6 @@
 {
   "name": "@yellowspot/ng-truncate",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -9,9 +9,7 @@
   "bugs": {
     "url": "https://github.com/yellowspot/ng2-truncate/issues"
   },
-  "dependencies": {
-    "tslib": "^2.0.0"
-  },
+  "dependencies": {},
   "peerDependencies": {
     "@angular/common": ">= 4.0.0",
     "@angular/core": ">= 4.0.0"
