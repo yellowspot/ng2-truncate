@@ -141,7 +141,7 @@ This pipe has also a second parameter to override the suffix used
 
 Check out the [Live demo](https://yellowspot.github.io/ng2-truncate-demo)
 
-...Or modify on Plunker [here](https://embed.plnkr.co/d3JiQCw756OEjS0HkVuY)
+...Or modify on CodeSanbox [here](https://codesandbox.io/s/ng-truncate-demo-4yd291)
 
 ...Or clone the demo app built using [angular-cli](https://cli.angular.io): https://github.com/yellowspot/ng2-truncate-demo
 
