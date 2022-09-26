@@ -1,11 +1,14 @@
-version: 2
+version: 2.1
+
+orbs:
+  browser-tools: circleci/browser-tools@1.4.0
+
 jobs:
   build:
     docker:
       - image: cimg/node:16.17.1-browsers
-    environment:
-      CHROME_BIN: /usr/bin/google-chrome
     steps:
+      - browser-tools/install-chrome
       - checkout
       - restore_cache:
           keys:
