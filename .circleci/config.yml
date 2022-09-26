@@ -3,6 +3,8 @@ jobs:
   build:
     docker:
       - image: cimg/node:16.17.1-browsers
+    environment:
+      CHROME_BIN: /usr/bin/google-chrome
     steps:
       - checkout
       - restore_cache:
