@@ -1,24 +1,20 @@
-version: 2
+version: 2.1
+
+orbs:
+  browser-tools: circleci/browser-tools@1.4.0
+  node: circleci/node@5.0
+
 jobs:
   build:
     docker:
-      - image: circleci/node:14.15.3-browsers
+      - image: cimg/node:16.17.1-browsers
     steps:
+      - browser-tools/install-chrome
       - checkout
-      - restore_cache:
-          keys:
-            - dependency-cache-{{ checksum "package-lock.json" }}
-            - dependency-cache-
-      - run:
-          name: install
-          command: npm install
+      - node/install-packages
       - run:
           name: Lint
           command: npm run ng -- lint @yellowspot/ng-truncate
       - run:
           name: Unit Test
           command: npm run ng -- test --watch false @yellowspot/ng-truncate
-      - save_cache:
-          key: dependency-cache-{{ checksum "package-lock.json" }}
-          paths:
-            - ./node_modules

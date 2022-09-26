@@ -129,11 +129,11 @@
             "tsConfig": "projects/yellowspot/ng-truncate/tsconfig.lib.json",
             "project": "projects/yellowspot/ng-truncate/ng-package.json"
           },
-            "configurations": {
-              "production": {
-                "tsConfig": "projects/yellowspot/ng-truncate/tsconfig.lib.prod.json"
-              }
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/yellowspot/ng-truncate/tsconfig.lib.prod.json"
             }
+          }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
@@ -153,6 +153,5 @@
         }
       }
     }
-  },
-  "defaultProject": "ng-truncate-app"
+  }
 }
